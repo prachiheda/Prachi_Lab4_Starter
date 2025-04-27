@@ -34,7 +34,9 @@ function discountPrices(prices, discount) {
     if (prices.length === 0) {
         return false;
     }
-
+    if (discount < 0 || discount > 1) {
+        return false;
+    }
     const discounted = []
     const length = prices.length;
     let discountedPrice = 0
